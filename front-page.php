@@ -22,15 +22,85 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
 		endwhile; // End of the loop.
 		?>
+
+			<section>
+			<h1>
+			<?php 
+				if (function_exists('get_field')):
+					if (get_field('headline')):
+						the_field('headline');
+					endif;
+				endif;
+			?>
+			</h1>
+			<?php 
+				if (function_exists('get_field')):
+					if (get_field('tagline')):
+						the_field('tagline');
+					endif;
+				endif;
+			?>
+			<?php 
+				if (function_exists('get_field')):
+					if (get_field('quote_button')):
+						the_field('quote_button');
+					endif;
+				endif;
+			?>
+			</section>
+
+			<section class="home-content">
+				<article>
+				<?php 
+				if (function_exists('get_field')):
+					if (get_field('subhead1')):
+						the_field('subhead1');
+					endif;
+				endif;
+				?>
+				<div>
+				<?php 
+				if (function_exists('get_field')):
+					if (get_field('content1')):
+						the_field('content1');
+					endif;
+				endif;
+				?>
+				</div>
+				<div>
+				</div>
+				</article>
+
+				<article>
+				<?php 
+				if (function_exists('get_field')):
+					if (get_field('subhead2')):
+						the_field('subhead2');
+					endif;
+				endif;
+				?>
+				<div>
+				<?php 
+				if (function_exists('get_field')):
+					if (get_field('content2')):
+						the_field('content2');
+					endif;
+				endif;
+				?>
+				</div>
+				</article>
+			
+			
+			</section>
+
+			<section class="home-services">
+				<h2>Our Services</h2>
+			</section>
+
+			<section class="testimonials">
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -1,80 +1,116 @@
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
+.site-header{
+	top: 0;
+	background: $darkgrey;
+	// height: 50px;
 	width: 100%;
+	position: relative;
 
-	ul {
-		display: none;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
+	h1{
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 100%;
-			left: -999em;
-			z-index: 99999;
+		display:inline-block;
+		margin:0 0 0 50px;
+		
+		font:2em 'avenir',sans-serif;
+		line-height:50px;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
+		a{
+			text-decoration: none;
+			color:#fff;
 		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+		
+		
 	}
 }
+	.main-navigation {
+
+		float:right;
+  		display:flex;
+		// clear: both;
+		// display: block;
+
+
+
+		ul {
+			
+			display: none;
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+			background: rgb(117, 191, 247);
+
+			ul {
+				// display: none;
+				// flex-direction: column;
+				// top: 100%;
+				// left: -999em;
+				z-index: 99999;
+
+				ul {
+					// left: -999em;
+					top: 0;
+				}
+
+				li {
+					// &:hover > ul,
+					// &.focus > ul {
+					// 	left: 100%;
+					// }
+					// float:left;
+				}
+
+				a {
+				
+					
+				}
+
+				// :hover > a,
+				// .focus > a {
+				// }
+
+				// a:hover,
+				// a.focus {
+				// }
+			}
+
+			// li:hover > ul,
+			// li.focus > ul {
+			// 	left: auto;
+			// }
+		}
+
+		li {
+			// float: left;
+			// position: relative;
+
+			// &:hover > a,
+			// &.focus > a {
+			// }
+		}
+
+		a {
+			// display: block;
+			text-decoration: none;
+		}
+
+		// .current_page_item > a,
+		// .current-menu-item > a,
+		// .current_page_ancestor > a,
+		// .current-menu-ancestor > a {
+		// }
+	}
+
 
 /* Small menu. */
+.menu-button{
+
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	
 }
+
 
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {

@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'ahl99_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ahl99_scripts() {
-	wp_enqueue_style( 'ahl99-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ahl99-style', get_stylesheet_uri(), array(), time() );
 
 	wp_enqueue_script( 'ahl99-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -158,4 +158,6 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+wp_enqueue_script( 'fontawesomejs', get_template_directory_uri().'/fonts/fontawesome/js/fontawesome-all.min.js', array('jquery'), time(), true );
 

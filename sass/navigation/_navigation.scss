@@ -1,7 +1,25 @@
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-@import "links";
+a {
+	color: $blue;
+
+	// &:visited {
+	// 	color: $color__link-visited;
+	// }
+	&:hover,
+	&:focus,
+	&:active {
+		color:$blue;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
 
 /*--------------------------------------------------------------
 ## Menus
