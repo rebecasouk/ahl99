@@ -44,7 +44,16 @@
 				<?php
 			else :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">AHL99<?php //bloginfo( 'name' ); ?></a></h1>
+				<!-- <div class="wordmark"> -->
+					
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">AHL99
+			
+				<span>Global Transports LTD.<span>
+				</a>
+			<?php //bloginfo( 'name' ); ?></h1>
+				<!-- <p class="site-title">Global Transports LTD.</p> -->
+				
+			<!-- </div> -->
 				<?php
 			endif;
 			?>
