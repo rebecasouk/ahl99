@@ -4,6 +4,7 @@
 	height: 80px;
 	width: 100%;
 	position: fixed;
+	z-index: 9999;
 
 	
 	// .wordmark {
@@ -83,6 +84,7 @@
 			// display: block;
 			text-decoration: none;
 			transition:all 300ms linear;
+			color: #fff;
 		}
 
 		// .current_page_item > a,
@@ -116,6 +118,9 @@
 
 
 @media screen and (min-width: 700px) {
+	.site-header{
+		background: transparent;
+	}
 	.menu-nav-container{
 		margin-right: 70px;
 	}
