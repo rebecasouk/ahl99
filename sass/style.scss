@@ -112,8 +112,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	
 }
 
-article{
-	margin: 0 10px;
+section{
+	padding: 0 20px;
 }
 
 /*--------------------------------------------------------------
@@ -124,7 +124,7 @@ article{
 	position: relative;
 	text-align: center;
 	margin:  auto;
-	padding: auto;
+	padding: 0;
 	.banner{
 		
 		img{
@@ -184,9 +184,8 @@ article{
 			text-align: center;
 			margin-left: auto;
 			margin-right: auto;
-			margin-bottom: 20px; 
+			margin-bottom: 25px; 
 			@media screen and (min-width: 700px) {
-				
 				max-width: 30%;
 		
 			}
@@ -195,13 +194,8 @@ article{
 	}
 	
 	h1 {
-		// margin-top: -20px;
 		font-family: $avenir;
 		font-weight: bold;
-		// position: absolute;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
 		color: white;
 		text-align: center;
 		@media screen and (min-width: 375px) {
@@ -210,8 +204,7 @@ article{
 		}
 		@media screen and (min-width: 700px) {
 			margin-bottom: 30px;
-			// line-height: 80px;
-			// left: 30%;
+
 			
 		}
 	}
@@ -220,13 +213,114 @@ article{
 	.quote{
 		font-family: $roboto;
 		font-weight: 100;
-		// position: absolute;
-		// top: 50%;
-		// left: 50%;
-		// transform: translate(-50%, -50%);
 		border: 2px solid #fff;
 		padding: 10px;
 		color: white;
 		text-decoration: none;
+		transition:all 300ms linear;
+
+		&:hover{
+			background: $lightblue;
+			border: 2px solid $lightblue;
+			
+
+		}
 	}
+}
+
+.home-content{
+
+	&:after{
+			
+		content: '';
+		display: block;
+		background: $darkgrey;
+		height: 2px;
+		max-width: 20%;
+		text-align: center;
+		margin: 25px 0;
+		margin-left: auto;
+		margin-right: auto;
+
+		@media screen and (min-width: 1000px) {
+			display: none;
+	
+		}
+	}
+}
+
+.home-services{
+
+	h2{
+		text-align: center;
+	}
+
+	article{
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		justify-content: center;
+	}
+	h3{
+		padding: 0 10px;
+	}
+	h3:after{
+		content: '';
+		display: block;
+		background: $lightblue;
+		height: 3px;
+		width: 25px;
+	}
+	div{
+		border: 1px solid $blue;
+		margin: 20px;
+		box-shadow: 10px 10px 18px -8px rgba(0,0,0,0.26);
+		
+	}
+	img {
+		width: 100%;
+	}
+	p {
+		display: block;
+		text-align: right;
+		margin-right: 20px;
+
+		a{
+			transition:all 300ms linear;
+			&:hover{
+				color: $lightblue;
+			}
+	
+		}
+	}
+
+	@media screen and (min-width: 700px) {
+		article{
+			display: flex;
+			flex-direction: row;
+		}
+
+		
+	}
+	
+}
+
+.testimonal-title{
+	text-align: center;
+}
+
+.testimonials{
+	background: $blue;
+	padding: 25px;
+	p{
+		color: #fff;
+	}
+}
+
+.site-footer{
+	height: 50px;
+	padding: 10px;
+	background: $darkgrey;
+	color: #fff;
 }

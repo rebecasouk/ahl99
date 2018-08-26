@@ -57,6 +57,8 @@ get_header();
 					</a>
 				</article>
 			</section>
+			
+			
 
 			<section class="home-content">
 				<article>
@@ -71,7 +73,7 @@ get_header();
 					</h2>
 				
 				<div>
-				<p>
+				
 					<?php 
 					if (function_exists('get_field')):
 						if (get_field('content1')):
@@ -79,12 +81,92 @@ get_header();
 						endif;
 					endif;
 					?>
-				</p>
+				
 				</div>
 				<div>
 				</div>
 				</article>
+				</section>
 
+
+					<section class="home-services">
+				<h2>Our Services</h2>
+				<article>
+					<div>
+						<?php 
+							if (function_exists('get_field')):
+								if (get_field('service_image1')):
+									echo '<img src="';
+									the_field('service_image1');
+									echo '" alt="Road Freight">	';
+								endif;
+							endif;
+						?>
+						
+						<h3>
+						<?php 
+						if (function_exists('get_field')):
+							if (get_field('service1')):
+								the_field('service1');
+							endif;
+						endif;
+						?>
+						</h3>
+					
+					</div>
+				
+					<div>
+					<?php 
+						if (function_exists('get_field')):
+								if (get_field('service_image2')):
+									echo '<img src="';
+									the_field('service_image2');
+									echo '" alt="">	';
+								endif;
+							endif;
+						?>
+						
+
+
+						<h3>
+							<?php 
+							if (function_exists('get_field')):
+								if (get_field('service2')):
+									the_field('service2');
+								endif;
+							endif;
+							?>
+						</h3>
+					</div>
+					<div>
+
+						<?php 
+							if (function_exists('get_field')):
+								if (get_field('service_image3')):
+									echo '<img src="';
+									the_field('service_image3');
+									echo '" alt="">	';
+								endif;
+							endif;
+						?>
+						
+						<h3>
+						<?php 
+						if (function_exists('get_field')):
+							if (get_field('service3')):
+								the_field('service3');
+							endif;
+						endif;
+						?>
+					</h3>
+						
+					</div>
+					
+				</article>
+				<p><a href="">View all services ></a></p>
+			</section>
+
+				<section class="home-content">
 				<article>
 				<h2>
 					<?php 
@@ -96,24 +178,63 @@ get_header();
 					?>
 				</h2>
 				<div>
-				<?php 
-				if (function_exists('get_field')):
-					if (get_field('content2')):
-						the_field('content2');
+					<?php 
+					if (function_exists('get_field')):
+						if (get_field('content2')):
+							the_field('content2');
+						endif;
 					endif;
-				endif;
-				?>
+					?>
+				
 				</div>
 				</article>
 			
 			
 			</section>
 
-			<section class="home-services">
-				<h2>Our Services</h2>
-			</section>
-
+			
+						
+			<section><h2 class="testimonal-title">What People Are Saying</h2></section>
 			<section class="testimonials">
+				
+				<article>
+					<div>
+					<?php 
+						if (function_exists('get_field')):
+							if (get_field('testimonial1')):
+								the_field('testimonial1');
+							endif;
+						endif;
+						?>
+						<p>
+						<?php 
+						if (function_exists('get_field')):
+							if (get_field('testimonial_person1')):
+								the_field('testimonial_person1');
+							endif;
+						endif;
+						?>
+						</p>
+					</div>
+					<div>
+					<?php 
+						if (function_exists('get_field')):
+							if (get_field('testimonial2')):
+								the_field('testimonial2');
+							endif;
+						endif;
+						?>
+					<p>
+						<?php 
+						if (function_exists('get_field')):
+							if (get_field('testimonial_person2')):
+								the_field('testimonial_person2');
+							endif;
+						endif;
+						?>
+						</p>
+					</div>
+				</article>
 			</section>
 
 		</main><!-- #main -->
