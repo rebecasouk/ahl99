@@ -366,11 +366,21 @@ section { padding: 0 20px; }
 
 .home-content { background-image: url("images/grey-texture.png"); background-position: center bottom; background-repeat: repeat; background-attachment: fixed; background-size: 500px; padding: 5%; }
 
-.home-content div { width: 500px; }
+.home-content aside { max-width: 500px; }
+
+.home-content aside img { width: 100%; }
 
 @media screen and (min-width: 765px) { .home-content { padding: 2% 7%; margin-bottom: 2em; }
   .home-content h2 { margin-top: 15px; }
   .home-content p { margin-left: 50px; margin-right: 50px; } }
+
+@media screen and (min-width: 700px) { .hc2 aside { margin: auto; }
+  .hc2 aside img { width: 100%; } }
+
+@media screen and (min-width: 1000px) { .hc2 h2 { margin: auto; max-width: 1200px; }
+  .hc2 article { display: -webkit-box; display: -ms-flexbox; display: flex; }
+  .hc2 div { position: relative; display: inline-block; max-width: 700px; }
+  .hc2 aside { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; margin: 0; margin-right: 50px; width: 400px; } }
 
 .separate:after { content: ''; display: block; background: #232526; height: 2px; max-width: 20%; text-align: center; margin: 25px 0; margin-left: auto; margin-right: auto; }
 

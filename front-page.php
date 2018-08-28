@@ -83,17 +83,7 @@ get_header();
 					?>
 				
 				</div>
-				<div>
-				<?php 
-					if (function_exists('get_field')):
-							if (get_field('service_image1')):
-								echo '<img src="';
-								the_field('service_image1');
-								echo '" alt="Road Freight">	';
-							endif;
-						endif;
-					?>
-				</div>
+			
 				</article>
 				</section>
 					
@@ -176,8 +166,7 @@ get_header();
 				<p><a href="">View all services ></a></p>
 			</section>
 
-				<section class="home-content">
-				<article>
+				<section class="home-content hc2">
 				<h2>
 					<?php 
 					if (function_exists('get_field')):
@@ -187,6 +176,8 @@ get_header();
 					endif;
 					?>
 				</h2>
+				<article>
+				
 				<div>
 					<?php 
 					if (function_exists('get_field')):
@@ -197,6 +188,19 @@ get_header();
 					?>
 				
 				</div>
+				<aside>
+				<?php 
+					if (function_exists('get_field')):
+							if (get_field('image2')):
+								echo '<img src="';
+								the_field('image2');
+								echo '" alt="Who We Are">	';
+							endif;
+						endif;
+					?>
+				</aside>
+
+					
 				</article>
 			
 			
