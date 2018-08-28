@@ -1,10 +1,11 @@
-.site-header{
-	top: 0;
-	background: $darkgrey;
+header{
+	@include top(0);
+	background-color: $darkgrey;
 	height: 80px;
 	width: 100%;
-	position: fixed;
+	position: sticky;
 	z-index: 9999;
+	transition: background-color 300ms ease-in-out;
 
 	
 	// .wordmark {
@@ -27,8 +28,6 @@
 				}
 			}
 
-
-			
 		
 			span{
 				display: block;
@@ -45,6 +44,7 @@
 
 	// }
 }
+
 	.main-navigation {
 	
 		float:right;
@@ -114,12 +114,13 @@
 	visibility:visible;
 	opacity: 1;
 	
+	
 }
 
 
 @media screen and (min-width: 700px) {
 	.site-header{
-		background: transparent;
+		background-color: transparent;
 	}
 	.menu-nav-container{
 		margin-right: 70px;
@@ -131,6 +132,12 @@
 	}
 	.main-navigation ul {
 		display: block;
+	}
+
+	.site-header.solid {
+		background-color: $darkgrey;
+		transition: background-color 1s ease 0s;
+		// box-shadow: 0 0 4px grey;
 	}
 	
 	.main-navigation {

@@ -161,3 +161,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 wp_enqueue_script( 'fontawesomejs', get_template_directory_uri().'/fonts/fontawesome/js/fontawesome-all.min.js', array('jquery'), time(), true );
 
+
+wp_enqueue_script( 'navchangejs', get_template_directory_uri().'/js/nav-change.js', array('jquery'), time(), true );

@@ -84,12 +84,22 @@ get_header();
 				
 				</div>
 				<div>
+				<?php 
+					if (function_exists('get_field')):
+							if (get_field('service_image1')):
+								echo '<img src="';
+								the_field('service_image1');
+								echo '" alt="Road Freight">	';
+							endif;
+						endif;
+					?>
 				</div>
 				</article>
 				</section>
+					
+				<section class="separate"></section>
 
-
-					<section class="home-services">
+				<section class="home-services">
 				<h2>Our Services</h2>
 				<article>
 					<div>
@@ -192,7 +202,7 @@ get_header();
 			
 			</section>
 
-			
+			<section class="separate"></section>
 						
 			<section><h2 class="testimonal-title">What People Are Saying</h2></section>
 			<section class="testimonials">

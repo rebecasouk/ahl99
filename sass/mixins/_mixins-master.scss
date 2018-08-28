@@ -27,3 +27,31 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+@mixin background($imgpath, 
+	$position: center bottom, 
+	$repeat: repeat,  
+	$attatchment: fixed, 
+	$size: 500px) 
+	{
+		background: {
+			image: url($imgpath);
+			position: $position;
+			repeat: $repeat;
+			attachment: $attatchment;
+			size: $size;
+		}
+	
+}
+
+@mixin top($top){
+    top: $top;
+    body.admin-bar & {
+        @media screen and (min-width: 601px){
+            top: 46px + $top;
+        }
+        @media screen and (min-width:783px){
+            top: 32px + $top;
+        }
+    }
+}
