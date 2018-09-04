@@ -23,8 +23,20 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ahl99' ); ?></a>
-
-	<header id="masthead" class="site-header">
+	
+	<?php
+			if ( is_front_page() ) :
+				?>
+				<header id="masthead" class="site-header">
+				<?php
+			else :
+				?>
+				<header id="masthead" class="site-header solid">
+				<?php
+			endif;
+			?>
+	
+	
 		<!-- <div class="site-branding"> -->
 			<?php
 			the_custom_logo();

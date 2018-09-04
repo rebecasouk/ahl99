@@ -1,4 +1,4 @@
-header{
+.site-header{
 	@include top(0);
 	background-color: $darkgrey;
 	height: 80px;
@@ -60,7 +60,7 @@ header{
 			list-style: none;
 			margin: 0;
 			padding-left: 0;
-			background: rgb(117, 191, 247);
+			background: rgb(60, 60, 60);
 			position:absolute;
 			top:100%;
 			left:0;
@@ -121,6 +121,9 @@ header{
 @media screen and (min-width: 700px) {
 	.site-header{
 		background-color: transparent;
+	}
+	.site-header2{
+		background-color: $darkgrey;
 	}
 	.menu-nav-container{
 		margin-right: 70px;

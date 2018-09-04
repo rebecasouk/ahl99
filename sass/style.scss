@@ -122,10 +122,10 @@ section{
 	
 }
 
+
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
-
 .hero{
 	position: relative;
 	text-align: center;
@@ -400,13 +400,120 @@ section{
 }
 
 .testimonials{
+	position: relative;
 	background: $blue;
 	padding: 25px;
 	margin-bottom: 2em;
+
+	.fa-quote-left{
+		left: 2%;
+		top: 2%;
+		position: absolute;
+		color: $darkblue;
+		font-size: 50px;
+	}
+	.fa-quote-right{
+		bottom: 2%;
+		right: 2%;
+		position: absolute;
+		color: $darkblue;
+		font-size: 50px;
+	}
+	
+	div:first-of-type{
+		padding: 30px 20px 0px;
+
+	}
+	div:last-of-type{
+		padding: 0 20px;
+	}
 	p{
 		color: #fff;
+		position: relative;
+	}
+
+	@media screen and (min-width: 700px) {
+		.fa-quote-left{ 
+			top: 5%;
+		}
+		.fa-quote-right{
+			bottom: 5%
+		};
+	
+	}
+	@media screen and (min-width: 1200px){
+		article{
+			display: flex;
+		}
+		div:last-of-type{
+			padding: 30px 20px 0px;
+		}
+		div{
+			max-width: 600px;
+		}
+		.fa-quote-right{
+			max-width: 1200px;
+		}
+
+	}
+	@media screen and (min-width: 1350px) {
+		div:first-of-type, div:last-of-type{
+			padding: 0;
+		}
+		div:first-of-type{
+			padding-right: 15px;
+	
+		}
+		div:last-of-type{
+			padding-left: 15px;
+		}
 	}
 }
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact{
+
+	aside{
+		display: flex;
+		align-items: center;
+		align-content: flex-start;
+		p{
+			// margin: 10px 0;
+			margin: 0;
+			padding: 0;
+			// margin-bottom: -8px;
+			padding-left: 10px;
+			align-self: baseline;
+			
+		}
+	}
+	.fa-envelope, .fa-phone-square, .fa-map-marker-alt{
+		font-size: 1.1em;
+		color: $blue;
+		align-items: center;
+	}
+
+	#wpforms-86-field_2{
+		resize: none;
+	}
+
+	#wpforms-confirmation-86{
+		color: #fff;
+		background: $lightblue;
+		border: 1px solid $darkblue;
+	}
+
+	#wpforms-submit-86{
+		background: $blue;
+		text-transform: uppercase;
+		border: none;
+		color: #fff;
+		padding: 15px 25px;
+	}
+}
+
 
 .site-footer{
 	height: 50px;
