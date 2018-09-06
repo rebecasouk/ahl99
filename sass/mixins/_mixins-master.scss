@@ -44,6 +44,22 @@
 	
 }
 
+@mixin banner($imgpath, 
+	$position: center center, 
+	$repeat: no-repeat,  
+	$attatchment: fixed, 
+	$size: cover) 
+	{
+		background: {
+			image: url($imgpath);
+			position: $position;
+			repeat: $repeat;
+			attachment: $attatchment;
+			size: $size;
+		}
+	
+}
+
 @mixin top($top){
     top: $top;
     body.admin-bar & {

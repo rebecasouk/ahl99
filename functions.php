@@ -162,4 +162,9 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 wp_enqueue_script( 'fontawesomejs', get_template_directory_uri().'/fonts/fontawesome/js/fontawesome-all.min.js', array('jquery'), time(), true );
 
 
-wp_enqueue_script( 'navchangejs', get_template_directory_uri().'/js/nav-change.js', array('jquery'), time(), true );
+function nav_js() {
+    if ( is_front_page() ) :
+		wp_enqueue_script( 'navchangejs', get_template_directory_uri().'/js/nav-change.js', array('jquery'), time(), true );
+    endif;
+}
+add_action( 'wp_enqueue_scripts', 'nav_js' );
