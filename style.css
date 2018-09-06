@@ -438,17 +438,29 @@ section { padding: 0 20px; }
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact aside { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -ms-flex-line-pack: start; align-content: flex-start; }
+.contact { -webkit-transition: display .25s linear; transition: display .25s linear; }
 
-.contact aside p { margin: 0; padding: 0; padding-left: 10px; -ms-flex-item-align: baseline; align-self: baseline; }
+@media only screen and (min-width: 900px) { .contact .contact-content { display: -webkit-box; display: -ms-flexbox; display: flex; max-width: 1000px; margin-left: auto; margin-right: auto; } }
 
-.contact .fa-envelope, .contact .fa-phone-square, .contact .fa-map-marker-alt { font-size: 1.1em; color: #0B4182; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+@media only screen and (min-width: 900px) { .contact #wpforms-86-field_0-container { width: 600px; } }
+
+.contact td { padding: 10px 0; vertical-align: text-top; }
+
+.contact .fa-envelope, .contact .fa-phone-square, .contact .fa-map-marker-alt { font-size: 1.1em; color: #0B4182; vertical-align: text-top; margin-right: 0.5em; }
 
 .contact #wpforms-86-field_2 { resize: none; }
 
 .contact #wpforms-confirmation-86 { color: #fff; background: #75bff7; border: 1px solid #061D39; }
 
-.contact #wpforms-submit-86 { background: #0B4182; text-transform: uppercase; border: none; color: #fff; padding: 15px 25px; }
+@media only screen and (min-width: 900px) { .contact div.wpforms-submit-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; } }
+
+.contact button#wpforms-submit-86 { background: #0B4182; text-transform: uppercase; border: none; color: #fff; padding: 15px 25px; }
+
+.contact button { margin-left: auto; margin-right: auto; }
+
+@media only screen and (min-width: 900px) { .contact .contact-form { margin-left: 3%; } }
+
+@media only screen and (min-width: 1200px) { .contact .contact-info { max-width: 350px; margin-right: 1em; } }
 
 .site-footer { height: 50px; padding: 10px; background: #232526; color: #fff; }
 

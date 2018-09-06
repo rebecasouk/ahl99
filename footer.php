@@ -15,7 +15,7 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-		&copy; 2018 AHL99 Global Transports LTD. 
+		&copy; AHL99 Global Transports LTD. <?php echo strftime("%Y"); ?>.
 			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

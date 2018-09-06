@@ -254,61 +254,7 @@ get_header();
 				
 			</section>
 
-			<section class="contact">
-				<article>
-					<h2>Contact Us</h2>
-					<div class="contact-info">
-					<p>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. 
-					</p>
-					<aside>
-					<i class="far fa-envelope"></i>
-					
-					<p>
-					<?php 
-						if (function_exists('get_field')):
-							if (get_field('email', 12)):
-								the_field('email', 12);
-							endif;
-						endif;
-						?>
-					</p>
-					</aside>
-					<aside>
-					<i class="fas fa-phone-square"></i>
-					<p>
-					<?php 
-						if (function_exists('get_field')):
-							if (get_field('phone', 12)):
-								the_field('phone', 12);
-							endif;
-						endif;
-						?>
-					</p>
-					</aside>
-					<aside><i class="fas fa-map-marker-alt"></i> <p>
-					<?php 
-						if (function_exists('get_field')):
-							if (get_field('address', 12)):
-								the_field('address', 12);
-							endif;
-						endif;
-						?>
-					</p></a>
-					
-					</div>
-					
-					<div class="contact-form">
-					<?php 
-						if (function_exists('get_field')):
-							if (get_field('contact_form', 12)):
-								the_field('contact_form', 12);
-							endif;
-						endif;
-						?>
-					</div>
-				</article>
-			</section>
+			<?php get_template_part( 'template-parts/contact' );?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

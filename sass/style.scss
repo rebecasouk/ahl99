@@ -474,25 +474,34 @@ section{
 # Contact
 --------------------------------------------------------------*/
 .contact{
-
-	aside{
-		display: flex;
-		align-items: center;
-		align-content: flex-start;
-		p{
-			// margin: 10px 0;
-			margin: 0;
-			padding: 0;
-			// margin-bottom: -8px;
-			padding-left: 10px;
-			align-self: baseline;
-			
+	transition: display .25s linear; 
+	.contact-content{
+		@media only screen and (min-width:900px) {
+			display: flex;
+			max-width: 1000px;
+			margin-left: auto;
+			margin-right: auto;
 		}
+	}
+
+	#wpforms-86-field_0-container{
+		@media only screen and (min-width:900px) {
+		width: 600px;
+		}
+	}
+
+
+	td{
+		padding: 10px 0;
+		vertical-align: text-top;
+	
 	}
 	.fa-envelope, .fa-phone-square, .fa-map-marker-alt{
 		font-size: 1.1em;
 		color: $blue;
-		align-items: center;
+		vertical-align: text-top;
+		margin-right: 0.5em;
+		
 	}
 
 	#wpforms-86-field_2{
@@ -505,14 +514,46 @@ section{
 		border: 1px solid $darkblue;
 	}
 
-	#wpforms-submit-86{
+	div.wpforms-submit-container{
+		@media only screen and (min-width:900px) {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	button#wpforms-submit-86 {
+		
+		
 		background: $blue;
 		text-transform: uppercase;
 		border: none;
 		color: #fff;
 		padding: 15px 25px;
 	}
+
+	button {
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+
+	.contact-form{
+		@media only screen and (min-width:900px) {
+		margin-left: 3%;
+		}
+	}
+
+	.contact-info{
+		@media only screen and (min-width:1200px) {
+			max-width: 350px;
+			margin-right: 1em;
+
+		}
+	}
+
+	
 }
+
+
 
 
 .site-footer{
