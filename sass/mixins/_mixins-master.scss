@@ -45,7 +45,7 @@
 }
 
 @mixin banner($imgpath, 
-	$position: center center, 
+	$position: bottom, 
 	$repeat: no-repeat,  
 	$attatchment: fixed, 
 	$size: cover) 
